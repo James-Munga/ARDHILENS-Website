@@ -1,5 +1,5 @@
 /* =========================================================
-   MYGEOVISION
+   ARDHILENS
    PROJECTS PAGE
 ========================================================= */
 
@@ -516,7 +516,7 @@ a {
         relative;
 
     min-height:
-        720px;
+        760px;
 
     height:
         100vh;
@@ -528,7 +528,7 @@ a {
         flex;
 
     align-items:
-        center;
+        flex-start;
 
     overflow:
         hidden;
@@ -663,13 +663,13 @@ a {
         5;
 
     width:
-        min(1400px, 86%);
+        min(1500px, 86%);
 
     margin:
         0 auto;
 
     padding-top:
-        70px;
+        145px;
 
 }
 
@@ -717,7 +717,7 @@ a {
 .projects-hero h1 {
 
     max-width:
-        950px;
+        1250px;
 
     margin-top:
         25px;
@@ -727,7 +727,7 @@ a {
         sans-serif;
 
     font-size:
-        clamp(58px, 8vw, 110px);
+        clamp(64px, 7.2vw, 124px);
 
     font-weight:
         500;
@@ -736,7 +736,7 @@ a {
         0.9;
 
     letter-spacing:
-        -6px;
+        -5px;
 
 }
 
@@ -1809,11 +1809,17 @@ a {
 
 .projects-footer {
 
+    position: relative;
+
     background:
+        radial-gradient(ellipse at 8% 0%, rgba(0, 207, 165, 0.08), transparent 32%),
+        radial-gradient(ellipse at 92% 100%, rgba(25, 118, 210, 0.05), transparent 30%),
         #07100d;
 
     color:
         #ffffff;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
 
     padding:
         80px 7% 30px;
@@ -1829,14 +1835,17 @@ a {
     margin:
         auto;
 
-    display:
-        flex;
+    display: grid;
 
-    justify-content:
-        space-between;
+    grid-template-columns:
+        minmax(180px, 1.2fr)
+        minmax(120px, 0.65fr)
+        minmax(230px, 1fr)
+        minmax(260px, 1.2fr);
 
-    gap:
-        80px;
+    align-items: start;
+
+    gap: 50px;
 
 }
 
@@ -1853,6 +1862,21 @@ a {
 
     width:
         170px;
+
+}
+
+
+.projects-footer .footer-section h3::after {
+
+    display: block !important;
+
+}
+
+
+.projects-footer .footer-social {
+
+    border:
+        1px solid rgba(255,255,255,0.12) !important;
 
 }
 
@@ -2096,7 +2120,7 @@ a {
     .projects-hero h1 {
 
         font-size:
-            clamp(52px,13vw,75px);
+            clamp(52px,11.5vw,75px);
 
         letter-spacing:
             -3px;
@@ -2218,8 +2242,10 @@ a {
 
     .projects-footer-inner {
 
-        flex-direction:
-            column;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 42px 36px;
 
     }
 
@@ -2228,6 +2254,13 @@ a {
 
         gap:
             45px;
+
+    }
+
+
+    .projects-footer {
+
+        padding: 64px 6% 28px;
 
     }
 
@@ -2271,7 +2304,7 @@ a {
     .projects-hero h1 {
 
         font-size:
-            47px;
+            clamp(43px, 11.5vw, 47px);
 
     }
 
@@ -2307,6 +2340,16 @@ a {
 
         gap:
             30px;
+
+    }
+
+
+    .projects-footer-inner {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 34px;
 
     }
 
@@ -2470,6 +2513,7 @@ a {
     position: relative;
     color: rgba(255, 255, 255, 0.45);
     font-size: 11px;
+    text-decoration: none;
     transition:
         color 0.3s ease,
         padding-left 0.3s ease;
@@ -2515,6 +2559,7 @@ a {
     background: rgba(255, 255, 255, 0.045);
     border: 1px solid rgba(255, 255, 255, 0.08);
     font-size: 12px;
+    text-decoration: none;
     transition:
         transform 0.3s ease,
         color 0.3s ease,
@@ -2569,6 +2614,7 @@ a {
     color: rgba(255, 255, 255, 0.43);
     font-size: 10px;
     line-height: 1.5;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 

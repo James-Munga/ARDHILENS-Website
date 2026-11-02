@@ -313,8 +313,8 @@ img {
 .hero h1 {
     max-width: 1000px;
     font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(60px, 8vw, 115px);
-    font-weight: 600;
+    font-size: clamp(60px, 7vw, 100px);
+    font-weight: 500;
     line-height: 0.9;
     letter-spacing: -5px;
 }

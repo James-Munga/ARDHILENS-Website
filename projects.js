@@ -1,32 +1,18 @@
 /* =========================================================
-   MYGEOVISION
+   ARDHILENS
    PROJECTS PAGE JAVASCRIPT
 ========================================================= */
 
 
 /* =========================================================
    FILE PATHS
-=========================================================
-
-   IMPORTANT:
-
-   These paths assume your website folder is:
-
-   D:\MyGeovision\
-
-   and the data folder is:
-
-   D:\MyGeovision\Data\
-
-   Therefore the browser can access them as:
-
-   Data/KenyaCounties.geojson
-   Data/MYGeovision_Projects_Geocoded.geojson
+   // DATA FOLDER
+   D:\ARDHILENS\Data\
 
 ========================================================= */
 
 const PROJECTS_GEOJSON =
-    "Data/MYGeovision_Projects_Geocoded.geojson";
+    "Data/ARDHILENS_Projects_Geocoded.geojson";
 
 const COUNTIES_GEOJSON =
     "Data/KenyaCounties.geojson";
@@ -504,7 +490,7 @@ function drawProjects(
                                     "PROJECT"
 
                                 ]
-                            ) || "MyGeovision Project";
+                            ) || "ARDHILENS Project";
 
 
                         /*

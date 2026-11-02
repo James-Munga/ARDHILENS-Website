@@ -256,8 +256,9 @@
     position: relative;
 
     min-height: 100vh;
+    min-height: 100svh;
 
-    padding: 170px 7% 100px;
+    padding: 145px 7% 56px;
 
     display: flex;
     align-items: center;
@@ -308,16 +309,16 @@
     background:
         linear-gradient(
             180deg,
-            rgba(180, 198, 221, 0.35),
-            rgba(2, 7, 13, 0.18) 42%,
-            rgba(2, 7, 13, 0.55)
+            rgba(2, 7, 13, 0.42),
+            rgba(2, 7, 13, 0.38) 42%,
+            rgba(2, 7, 13, 0.72)
         ),
 
         linear-gradient(
             90deg,
-            rgba(2, 7, 13, 0.50),
-            rgba(2, 7, 13, 0.25) 50%,
-            rgba(2, 7, 13, 0.15)
+            rgba(2, 7, 13, 0.42),
+            rgba(2, 7, 13, 0.34) 52%,
+            rgba(2, 7, 13, 0.30)
         );
 }
 
@@ -493,16 +494,15 @@
 ========================================================= */
 
 .contact-form-container {
-    padding-top: 45px;
-    padding-right: 45px;
-    padding-bottom: 0px;
-    padding-left: 45px;
+    padding: 38px 42px 30px;
 
     background:
-        rgba(255, 255, 255, 0.055);
+        rgba(7, 16, 13, 0.54);
 
     border:
-        1px solid rgba(255, 255, 255, 0.15);
+        1px solid rgba(255, 255, 255, 0.20);
+
+    border-radius: 4px;
 
     box-shadow:
         0 30px 80px rgba(0, 0, 0, 0.30);
@@ -548,11 +548,11 @@
 
     color: rgba(255, 255, 255, 0.68);
 
-    font-size: 9px;
+    font-size: 10px;
 
     font-weight: 600;
 
-    letter-spacing: 1.8px;
+    letter-spacing: 1.6px;
 
     text-transform: uppercase;
 }
@@ -572,7 +572,7 @@
     outline: none;
 
     background:
-        rgba(255, 255, 255, 0.055);
+        rgba(255, 255, 255, 0.075);
 
     color: #ffffff;
 
@@ -644,7 +644,7 @@
 
 .form-field input::placeholder,
 .form-field textarea::placeholder {
-    color: rgba(255, 255, 255, 0.30);
+    color: rgba(255, 255, 255, 0.54);
 }
 
 

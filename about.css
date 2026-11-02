@@ -382,6 +382,16 @@
 }
 
 
+.people-section .about-heading {
+
+    display:
+        block;
+
+    margin-bottom:
+        54px;
+}
+
+
 /* =========================================================
    SECTION NUMBER
 ========================================================= */
@@ -1520,6 +1530,7 @@
 
 @media (max-width: 1050px) {
 
+
     .about-heading {
 
         grid-template-columns:
@@ -1768,6 +1779,163 @@
 
         transition-duration:
             0.01ms !important;
+    }
+
+}
+
+
+/* =========================================================
+   ABOUT PAGE FOOTER
+========================================================= */
+
+.about-footer {
+
+    padding: 78px 7% 28px;
+
+    background:
+        radial-gradient(ellipse at 8% 0%, rgba(0, 207, 165, 0.08), transparent 32%),
+        radial-gradient(ellipse at 92% 100%, rgba(25, 118, 210, 0.05), transparent 30%),
+        #07100d;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+}
+
+
+.about-footer .footer-container {
+
+    max-width: 1400px;
+
+    grid-template-columns:
+        minmax(180px, 1.2fr)
+        minmax(120px, 0.65fr)
+        minmax(230px, 1fr)
+        minmax(260px, 1.2fr);
+
+    gap: 50px;
+
+}
+
+
+.about-footer .footer-copyright {
+
+    margin-top: 20px;
+
+    color: rgba(255,255,255,0.42);
+
+}
+
+
+@media (max-width: 1050px) {
+
+    .about-footer .footer-container {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 42px 36px;
+
+    }
+
+}
+
+
+@media (max-width: 760px) {
+
+    .about-footer {
+
+        padding: 64px 6% 28px;
+
+    }
+
+    .about-footer .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 34px;
+
+    }
+
+    .about-footer .newsletter-form {
+
+        max-width: 100%;
+
+    }
+
+}
+
+
+.about-logo {
+
+    width: 245px;
+
+    height: 64px;
+
+    padding: 0 10px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(153,242,218,0.28);
+
+    border-radius: 12px;
+
+    background: linear-gradient(135deg, #176b56, #0b493d);
+
+    box-shadow: 0 10px 24px rgba(10,70,55,0.16);
+
+}
+
+
+.about-logo img {
+
+    flex: 0 0 220px;
+
+    width: 220px;
+
+    max-width: none;
+
+}
+
+
+@media (max-width: 760px) {
+
+    .about-logo {
+
+        width: 205px;
+
+        height: 58px;
+
+    }
+
+    .about-logo img {
+
+        flex-basis: 185px;
+
+        width: 185px;
+
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .about-logo {
+
+        width: 176px;
+
+        height: 54px;
+
+        padding: 0 7px;
+
+    }
+
+    .about-logo img {
+
+        flex-basis: 162px;
+
+        width: 162px;
+
     }
 
 }

@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"name": "MYGeovision_Projects_Geocoded",
+"name": "ARDHILENS_Projects_Geocoded",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
 { "type": "Feature", "properties": { "Project Title": "MALARIA INCIDENCE SPATIAL MODELING", "Location": "Kakamega County", "Link": "https://drive.google.com/drive/folders/1LfUjsf3qcdO4MeSI8P0pfMvX8tisGTc4?usp=sharing", "Location_Original": "Kakamega County", "Location_Clean": "Kakamega County", "Geocode_Query": "Kakamega County, Kenya", "Latitude": 0.28422, "Longitude": 34.75229, "Matched_Address": "Kakamega", "Geocode_Score": 86.49, "Match_Type": "Locality" }, "geometry": { "type": "Point", "coordinates": [ 34.75229, 0.28422 ] } },
