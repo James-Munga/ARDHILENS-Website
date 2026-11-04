@@ -1,15 +1,7 @@
-/* =========================================================
-   ARDHILENS
-   PROJECTS PAGE JAVASCRIPT
-========================================================= */
+/* Project page controller: loads project data and initializes the interactive map. */
 
 
-/* =========================================================
-   FILE PATHS
-   // DATA FOLDER
-   D:\ARDHILENS\Data\
-
-========================================================= */
+/* GeoJSON paths: these relative URLs load the project and county data from Data/. */
 
 const PROJECTS_GEOJSON =
     "Data/ARDHILENS_Projects_Geocoded.geojson";
@@ -18,9 +10,7 @@ const COUNTIES_GEOJSON =
     "Data/KenyaCounties.geojson";
 
 
-/* =========================================================
-   GLOBAL VARIABLES
-========================================================= */
+/* Global Variables section: JavaScript behavior for this part of the page. */
 
 let projectsMap;
 
@@ -33,9 +23,7 @@ let projectFeatures = [];
 let countyFeatures = [];
 
 
-/* =========================================================
-   DOM ELEMENTS
-========================================================= */
+/* Dom Elements section: JavaScript behavior for this part of the page. */
 
 const totalProjectsElement =
     document.getElementById("totalProjects");
@@ -59,9 +47,7 @@ const mobileMenu =
     document.getElementById("projectsMobileMenu");
 
 
-/* =========================================================
-   INITIALIZE PAGE
-========================================================= */
+/* Initialize Page section: JavaScript behavior for this part of the page. */
 
 document.addEventListener(
     "DOMContentLoaded",
@@ -75,9 +61,7 @@ document.addEventListener(
 );
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+/* Mobile Menu section: JavaScript behavior for this part of the page. */
 
 function initializeMobileMenu() {
 
@@ -107,10 +91,7 @@ function initializeMobileMenu() {
     );
 
 
-    /*
-       Close menu when a navigation
-       link is selected.
-    */
+    /* Close menu when a navigation link is selected. */
 
     const menuLinks =
         mobileMenu.querySelectorAll("a");
@@ -141,9 +122,7 @@ function initializeMobileMenu() {
 }
 
 
-/* =========================================================
-   INITIALIZE LEAFLET MAP
-========================================================= */
+/* Initialize Leaflet Map section: JavaScript behavior for this part of the page. */
 
 function initializeMap() {
 
@@ -165,11 +144,7 @@ function initializeMap() {
         );
 
 
-    /*
-       Carto Voyager provides a clean
-       modern basemap while keeping
-       the GIS overlays visible.
-    */
+    /* Carto Voyager provides a clean modern basemap while keeping the GIS overlays visible. */
 
     L.tileLayer(
          "https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}",
@@ -190,11 +165,7 @@ function initializeMap() {
     );
 
 
-    /*
-       Temporary Kenya view.
-       It will automatically be replaced
-       by the GeoJSON bounds after loading.
-    */
+    /* Temporary Kenya view. It will automatically be replaced by the GeoJSON bounds after loading. */
 
     projectsMap.setView(
         [-0.0236, 37.9062],
@@ -207,17 +178,13 @@ function initializeMap() {
 }
 
 
-/* =========================================================
-   LOAD BOTH GEOJSON FILES
-========================================================= */
+/* Load Both Geojson Files section: JavaScript behavior for this part of the page. */
 
 async function loadGeospatialData() {
 
     try {
 
-        /*
-           Load both files simultaneously.
-        */
+        /* Load both files simultaneously. */
 
         const [
             countiesResponse,
@@ -237,9 +204,7 @@ async function loadGeospatialData() {
         );
 
 
-        /*
-           Check whether files were found.
-        */
+        /* Check whether files were found. */
 
         if (
             !countiesResponse.ok
@@ -263,9 +228,7 @@ async function loadGeospatialData() {
         }
 
 
-        /*
-           Convert responses to JSON.
-        */
+        /* Convert responses to JSON. */
 
         const countiesData =
             await countiesResponse.json();
@@ -274,9 +237,7 @@ async function loadGeospatialData() {
             await projectsResponse.json();
 
 
-        /*
-           Store features globally.
-        */
+        /* Store features globally. */
 
         countyFeatures =
             countiesData.features || [];
@@ -285,27 +246,21 @@ async function loadGeospatialData() {
             projectsData.features || [];
 
 
-        /*
-           Draw counties.
-        */
+        /* Draw counties. */
 
         drawCounties(
             countiesData
         );
 
 
-        /*
-           Draw projects.
-        */
+        /* Draw projects. */
 
         drawProjects(
             projectsData
         );
 
 
-        /*
-           Calculate statistics.
-        */
+        /* Calculate statistics. */
 
         calculateStatistics(
             projectsData,
@@ -313,9 +268,7 @@ async function loadGeospatialData() {
         );
 
 
-        /*
-           Hide loading overlay.
-        */
+        /* Hide loading overlay. */
 
         hideMapLoading();
 
@@ -339,9 +292,7 @@ async function loadGeospatialData() {
 }
 
 
-/* =========================================================
-   DRAW KENYA COUNTIES
-========================================================= */
+/* Draw Kenya Counties section: JavaScript behavior for this part of the page. */
 
 function drawCounties(
     countiesData
@@ -377,9 +328,7 @@ function drawCounties(
                     },
 
 
-                /*
-                   County hover effect.
-                */
+                /* County hover effect. */
 
                 onEachFeature:
                     function (
@@ -426,9 +375,7 @@ function drawCounties(
 }
 
 
-/* =========================================================
-   DRAW PROJECT POINTS
-========================================================= */
+/* Draw Project Points section: JavaScript behavior for this part of the page. */
 
 function drawProjects(
     projectsData
@@ -468,11 +415,7 @@ function drawProjects(
                             feature.properties || {};
 
 
-                        /*
-                           Detect the project title
-                           regardless of small differences
-                           in field naming.
-                        */
+                        /* Detect the project title regardless of small differences in field naming. */
 
                         const projectTitle =
                             getProperty(
@@ -493,9 +436,7 @@ function drawProjects(
                             ) || "ARDHILENS Project";
 
 
-                        /*
-                           Detect location.
-                        */
+                        /* Detect location. */
 
                         const location =
                             getProperty(
@@ -516,14 +457,7 @@ function drawProjects(
                             ) || "Kenya";
 
 
-                        /*
-                           Popup contains ONLY:
-
-                           Project title
-                           Location
-
-                           as requested.
-                        */
+                        /* Popup contains ONLY: Project title Location as requested. */
 
                         const popupHTML = `
 
@@ -566,9 +500,7 @@ function drawProjects(
                         );
 
 
-                        /*
-                           Hover effect.
-                        */
+                        /* Hover effect. */
 
                         layer.on({
 
@@ -600,19 +532,14 @@ function drawProjects(
         );
 
 
-    /*
-       Fit map to ALL project points
-       when possible.
-    */
+    /* Fit map to ALL project points when possible. */
 
     fitMapToData();
 
 }
 
 
-/* =========================================================
-   CREATE PROJECT MARKER
-========================================================= */
+/* Create Project Marker section: JavaScript behavior for this part of the page. */
 
 function createProjectIcon() {
 
@@ -638,9 +565,7 @@ function createProjectIcon() {
 }
 
 
-/* =========================================================
-   FIT MAP TO PROJECT DATA
-========================================================= */
+/* Fit Map To Project Data section: JavaScript behavior for this part of the page. */
 
 function fitMapToData() {
 
@@ -671,9 +596,7 @@ function fitMapToData() {
 }
 
 
-/* =========================================================
-   CALCULATE STATISTICS
-========================================================= */
+/* Calculate Statistics section: JavaScript behavior for this part of the page. */
 
 function calculateStatistics(
     projectsData,
@@ -687,23 +610,13 @@ function calculateStatistics(
         countiesData.features || [];
 
 
-    /*
-       TOTAL PROJECTS
-
-       This comes directly from the
-       number of GeoJSON features.
-    */
+    /* TOTAL PROJECTS This comes directly from the number of GeoJSON features. */
 
     const totalProjects =
         projects.length;
 
 
-    /*
-       UNIQUE LOCATIONS
-
-       Extract location attributes and
-       count unique values.
-    */
+    /* UNIQUE LOCATIONS Extract location attributes and count unique values. */
 
     const locations =
         projects
@@ -757,9 +670,7 @@ function calculateStatistics(
         );
 
 
-    /*
-       Update page statistics.
-    */
+    /* Update page statistics. */
 
     animateNumber(
         totalProjectsElement,
@@ -779,9 +690,7 @@ function calculateStatistics(
     );
 
 
-    /*
-       Update map counter.
-    */
+    /* Update map counter. */
 
     animateNumber(
         mapProjectCountElement,
@@ -791,9 +700,7 @@ function calculateStatistics(
 }
 
 
-/* =========================================================
-   ANIMATED NUMBER
-========================================================= */
+/* Animated Number section: JavaScript behavior for this part of the page. */
 
 function animateNumber(
     element,
@@ -866,14 +773,7 @@ function animateNumber(
 }
 
 
-/* =========================================================
-   GET PROPERTY
-=========================================================
-
-   Handles different possible field names
-   in the GeoJSON.
-
-========================================================= */
+/* GET PROPERTY Handles different possible field names in the GeoJSON. */
 
 function getProperty(
     properties,
@@ -919,10 +819,7 @@ function getProperty(
     }
 
 
-    /*
-       Fallback:
-       try case-insensitive matching.
-    */
+    /* Fallback: try case-insensitive matching. */
 
     const keys =
         Object.keys(
@@ -977,9 +874,7 @@ function getProperty(
 }
 
 
-/* =========================================================
-   ESCAPE HTML
-========================================================= */
+/* Escape Html section: JavaScript behavior for this part of the page. */
 
 function escapeHTML(
     value
@@ -1010,9 +905,7 @@ function escapeHTML(
 }
 
 
-/* =========================================================
-   HIDE MAP LOADING
-========================================================= */
+/* Hide Map Loading section: JavaScript behavior for this part of the page. */
 
 function hideMapLoading() {
 
@@ -1043,9 +936,7 @@ function hideMapLoading() {
 }
 
 
-/* =========================================================
-   SHOW MAP ERROR
-========================================================= */
+/* Show Map Error section: JavaScript behavior for this part of the page. */
 
 function showMapError(
     message

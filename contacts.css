@@ -1,12 +1,7 @@
-/* =========================================================
-   MYGEOVISION
-   CONTACT PAGE
-========================================================= */
+/* ARDHILENS CONTACT PAGE styles: rules for this part of the ArdhiLens interface. */
 
 
-/* =========================================================
-   CONTACT NAVIGATION
-========================================================= */
+/* CONTACT NAVIGATION styles: rules for this part of the ArdhiLens interface. */
 
 .contact-navbar {
     position: absolute;
@@ -48,9 +43,7 @@
 }
 
 
-/* =========================================================
-   DESKTOP NAVIGATION
-========================================================= */
+/* DESKTOP NAVIGATION styles: rules for this part of the ArdhiLens interface. */
 
 .contact-nav {
     width: 680px;
@@ -138,9 +131,7 @@
 }
 
 
-/* =========================================================
-   MOBILE NAVIGATION
-========================================================= */
+/* MOBILE NAVIGATION styles: rules for this part of the ArdhiLens interface. */
 
 .contact-menu-button {
     display: none;
@@ -247,10 +238,7 @@
 }
 
 
-/* =========================================================
-   TELL US WHAT YOU NEED
-   FIRST MAIN SECTION
-========================================================= */
+/* TELL US WHAT YOU NEED FIRST MAIN SECTION styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-first {
     position: relative;
@@ -271,9 +259,7 @@
 }
 
 
-/* =========================================================
-   CONTACT BACKGROUND IMAGE
-========================================================= */
+/* CONTACT BACKGROUND IMAGE styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-background {
     position: absolute;
@@ -295,9 +281,7 @@
 }
 
 
-/* =========================================================
-   BACKGROUND OVERLAY
-========================================================= */
+/* BACKGROUND OVERLAY styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-overlay {
     position: absolute;
@@ -323,9 +307,7 @@
 }
 
 
-/* =========================================================
-   SUBTLE GIS GRID
-========================================================= */
+/* SUBTLE GIS GRID styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-first::before {
     content: "";
@@ -362,9 +344,7 @@
 }
 
 
-/* =========================================================
-   FORM WRAPPER
-========================================================= */
+/* FORM WRAPPER styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-wrapper {
     position: relative;
@@ -387,9 +367,7 @@
 }
 
 
-/* =========================================================
-   FORM INTRO
-========================================================= */
+/* FORM INTRO styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-intro {
     position: relative;
@@ -440,9 +418,7 @@
 }
 
 
-/* =========================================================
-   SECTION LABEL
-========================================================= */
+/* SECTION LABEL styles: rules for this part of the ArdhiLens interface. */
 
 .contact-section-label {
     display: inline-block;
@@ -457,9 +433,7 @@
 }
 
 
-/* =========================================================
-   FORM SIDE NOTE
-========================================================= */
+/* FORM SIDE NOTE styles: rules for this part of the ArdhiLens interface. */
 
 .form-side-note {
     margin-top: 55px;
@@ -489,9 +463,7 @@
 }
 
 
-/* =========================================================
-   CONTACT FORM CONTAINER
-========================================================= */
+/* CONTACT FORM CONTAINER styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-container {
     padding: 38px 42px 30px;
@@ -518,9 +490,7 @@
 }
 
 
-/* =========================================================
-   FORM ROW
-========================================================= */
+/* FORM ROW styles: rules for this part of the ArdhiLens interface. */
 
 .form-row {
     display: grid;
@@ -532,9 +502,7 @@
 }
 
 
-/* =========================================================
-   FORM FIELD
-========================================================= */
+/* FORM FIELD styles: rules for this part of the ArdhiLens interface. */
 
 .form-field {
     margin-bottom: 24px;
@@ -558,9 +526,7 @@
 }
 
 
-/* =========================================================
-   FORM INPUTS
-========================================================= */
+/* FORM INPUTS styles: rules for this part of the ArdhiLens interface. */
 
 .form-field input,
 .form-field select,
@@ -648,9 +614,7 @@
 }
 
 
-/* =========================================================
-   FORM FOCUS
-========================================================= */
+/* FORM FOCUS styles: rules for this part of the ArdhiLens interface. */
 
 .form-field input:focus,
 .form-field select:focus,
@@ -667,9 +631,7 @@
 }
 
 
-/* =========================================================
-   SUBMIT BUTTON
-========================================================= */
+/* SUBMIT BUTTON styles: rules for this part of the ArdhiLens interface. */
 
 .contact-submit-button {
     min-height: 56px;
@@ -736,9 +698,7 @@
 }
 
 
-/* =========================================================
-   FORM STATUS
-========================================================= */
+/* FORM STATUS styles: rules for this part of the ArdhiLens interface. */
 
 .contact-form-status {
     min-height: 25px;
@@ -761,9 +721,7 @@
 }
 
 
-/* =========================================================
-   CONTACT INFORMATION
-========================================================= */
+/* CONTACT INFORMATION styles: rules for this part of the ArdhiLens interface. */
 
 .contact-information {
     position: relative;
@@ -857,9 +815,7 @@
 }
 
 
-/* =========================================================
-   INFORMATION CARDS
-========================================================= */
+/* INFORMATION CARDS styles: rules for this part of the ArdhiLens interface. */
 
 .contact-info-grid {
     position: relative;
@@ -951,9 +907,7 @@
 }
 
 
-/* =========================================================
-   CONTACT ICONS
-========================================================= */
+/* CONTACT ICONS styles: rules for this part of the ArdhiLens interface. */
 
 .contact-icon {
     position: relative;
@@ -1044,9 +998,7 @@
 }
 
 
-/* =========================================================
-   CARD CONTENT
-========================================================= */
+/* CARD CONTENT styles: rules for this part of the ArdhiLens interface. */
 
 .contact-info-card-content {
     position: relative;
@@ -1124,9 +1076,7 @@
 }
 
 
-/* =========================================================
-   SOCIAL CONNECT
-========================================================= */
+/* SOCIAL CONNECT styles: rules for this part of the ArdhiLens interface. */
 
 .contact-connect {
     padding: 130px 7%;
@@ -1175,9 +1125,7 @@
 }
 
 
-/* =========================================================
-   SOCIAL ICONS
-========================================================= */
+/* SOCIAL ICONS styles: rules for this part of the ArdhiLens interface. */
 
 .contact-socials {
     display: flex;
@@ -1228,9 +1176,7 @@
 }
 
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* RESPONSIVE styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 1050px) {
 
@@ -1278,9 +1224,7 @@
 }
 
 
-/* =========================================================
-   TABLET / MOBILE
-========================================================= */
+/* TABLET / MOBILE styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 760px) {
 
@@ -1312,7 +1256,7 @@
     }
 
 
-    /* FIRST SECTION */
+    /* FIRST SECTION styles: rules for this part of the ArdhiLens interface. */
 
     .contact-form-first {
         min-height: auto;
@@ -1382,7 +1326,7 @@
     }
 
 
-    /* CONTACT INFORMATION */
+    /* CONTACT INFORMATION styles: rules for this part of the ArdhiLens interface. */
 
     .contact-information {
         padding:
@@ -1418,7 +1362,7 @@
     }
 
 
-    /* CONNECT */
+    /* CONNECT styles: rules for this part of the ArdhiLens interface. */
 
     .contact-connect {
         padding:
@@ -1440,9 +1384,7 @@
 }
 
 
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
+/* SMALL MOBILE styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 430px) {
 
@@ -1514,9 +1456,7 @@
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
+/* REDUCED MOTION styles: rules for this part of the ArdhiLens interface. */
 
 @media (prefers-reduced-motion: reduce) {
 

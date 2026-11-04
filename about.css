@@ -1,12 +1,7 @@
-/* =========================================================
-   MYGEOVISION
-   ABOUT PAGE
-========================================================= */
+/* ARDHILENS ABOUT PAGE styles: rules for this part of the ArdhiLens interface. */
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* HEADER styles: rules for this part of the ArdhiLens interface. */
 
 .about-header {
 
@@ -64,9 +59,7 @@
 }
 
 
-/* =========================================================
-   NAVIGATION
-========================================================= */
+/* NAVIGATION styles: rules for this part of the ArdhiLens interface. */
 
 .about-navigation {
 
@@ -188,9 +181,7 @@
 }
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+/* MOBILE MENU styles: rules for this part of the ArdhiLens interface. */
 
 .about-menu {
 
@@ -359,9 +350,7 @@
 }
 
 
-/* =========================================================
-   COMMON SECTION HEADING
-========================================================= */
+/* COMMON SECTION HEADING styles: rules for this part of the ArdhiLens interface. */
 
 .about-heading {
 
@@ -392,9 +381,7 @@
 }
 
 
-/* =========================================================
-   SECTION NUMBER
-========================================================= */
+/* SECTION NUMBER styles: rules for this part of the ArdhiLens interface. */
 
 .heading-number {
 
@@ -416,9 +403,7 @@
 }
 
 
-/* =========================================================
-   SECTION LABEL
-========================================================= */
+/* SECTION LABEL styles: rules for this part of the ArdhiLens interface. */
 
 .section-eyebrow {
 
@@ -439,9 +424,7 @@
 }
 
 
-/* =========================================================
-   MAIN HEADING
-========================================================= */
+/* MAIN HEADING styles: rules for this part of the ArdhiLens interface. */
 
 .heading-content h1 {
 
@@ -469,9 +452,7 @@
 }
 
 
-/* =========================================================
-   SECOND HEADING LINE
-========================================================= */
+/* SECOND HEADING LINE styles: rules for this part of the ArdhiLens interface. */
 
 .heading-content h1 span {
 
@@ -483,9 +464,7 @@
 }
 
 
-/* =========================================================
-   DESCRIPTION
-========================================================= */
+/* DESCRIPTION styles: rules for this part of the ArdhiLens interface. */
 
 .heading-content p {
 
@@ -505,9 +484,7 @@
         1.8;
 }
 
-/* =========================================================
-   PEOPLE SECTION
-========================================================= */
+/* PEOPLE SECTION styles: rules for this part of the ArdhiLens interface. */
 
 .people-section {
 
@@ -656,9 +633,7 @@
 }
 
 
-/* =========================================================
-   TEAM GRID
-========================================================= */
+/* TEAM GRID styles: rules for this part of the ArdhiLens interface. */
 
 .people-grid {
 
@@ -1047,9 +1022,7 @@
 }
 
 
-/* =========================================================
-   PARTNERSHIPS
-========================================================= */
+/* PARTNERSHIPS styles: rules for this part of the ArdhiLens interface. */
 
 .partnership-section {
 
@@ -1524,9 +1497,7 @@
 }
 
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+/* RESPONSIVE styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 1050px) {
 
@@ -1761,9 +1732,7 @@
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
+/* REDUCED MOTION styles: rules for this part of the ArdhiLens interface. */
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -1784,9 +1753,7 @@
 }
 
 
-/* =========================================================
-   ABOUT PAGE FOOTER
-========================================================= */
+/* ABOUT PAGE FOOTER styles: rules for this part of the ArdhiLens interface. */
 
 .about-footer {
 

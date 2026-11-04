@@ -1,10 +1,6 @@
-/* =========================================================
-   ARDHILENS SERVICES PAGE
-========================================================= */
+/* ARDHILENS SERVICES PAGE styles: rules for this part of the ArdhiLens interface. */
 
-/* =========================================================
-   SERVICES PAGE
-========================================================= */
+/* SERVICES PAGE styles: rules for this part of the ArdhiLens interface. */
 
 .services-page {
     background: #f1f3ed;
@@ -31,9 +27,7 @@
 }
 
 
-/* =========================================================
-   SERVICES INTRODUCTION
-========================================================= */
+/* SERVICES INTRODUCTION styles: rules for this part of the ArdhiLens interface. */
 
 .services-intro {
     position: relative;
@@ -49,9 +43,7 @@
 }
 
 
-/* =========================================================
-   INTRO INNER
-========================================================= */
+/* INTRO INNER styles: rules for this part of the ArdhiLens interface. */
 
 .services-intro-inner {
     position: relative;
@@ -72,9 +64,7 @@
 }
 
 
-/* =========================================================
-   INTRO VISUAL
-========================================================= */
+/* INTRO VISUAL styles: rules for this part of the ArdhiLens interface. */
 
 .services-intro-visual {
     position: relative;
@@ -88,9 +78,7 @@
 }
 
 
-/* =========================================================
-   IMAGE FRAME
-========================================================= */
+/* IMAGE FRAME styles: rules for this part of the ArdhiLens interface. */
 
 .intro-image-frame {
     position: relative;
@@ -158,9 +146,7 @@
 }
 
 
-/* =========================================================
-   KEYBOARD IMAGE
-========================================================= */
+/* KEYBOARD IMAGE styles: rules for this part of the ArdhiLens interface. */
 
 .intro-image-frame img {
     width: 100%;
@@ -200,9 +186,7 @@
 }
 
 
-/* =========================================================
-   IMAGE GREEN GLOW
-========================================================= */
+/* IMAGE GREEN GLOW styles: rules for this part of the ArdhiLens interface. */
 
 .intro-image-glow {
     position: absolute;
@@ -239,9 +223,7 @@
 }
 
 
-/* =========================================================
-   IMAGE LABEL
-========================================================= */
+/* IMAGE LABEL styles: rules for this part of the ArdhiLens interface. */
 
 .intro-image-label {
     position: absolute;
@@ -319,9 +301,7 @@
 }
 
 
-/* =========================================================
-   INTRO CONTENT
-========================================================= */
+/* INTRO CONTENT styles: rules for this part of the ArdhiLens interface. */
 
 .services-intro-content {
     position: relative;
@@ -334,9 +314,7 @@
 }
 
 
-/* =========================================================
-   INTRO LABEL
-========================================================= */
+/* INTRO LABEL styles: rules for this part of the ArdhiLens interface. */
 
 .services-label {
     display: flex;
@@ -368,9 +346,7 @@
 } */
 
 
-/* =========================================================
-   INTRO HEADING
-========================================================= */
+/* INTRO HEADING styles: rules for this part of the ArdhiLens interface. */
 
 .services-intro h2 {
     max-width: 720px;
@@ -405,9 +381,7 @@
 }
 
 
-/* =========================================================
-   INTRO PARAGRAPHS
-========================================================= */
+/* INTRO PARAGRAPHS styles: rules for this part of the ArdhiLens interface. */
 
 .services-intro p {
     max-width: 620px;
@@ -427,9 +401,7 @@
 }
 
 
-/* =========================================================
-   SERVICE GRID
-========================================================= */
+/* SERVICE GRID styles: rules for this part of the ArdhiLens interface. */
 
 .services-grid-section {
     padding:
@@ -496,9 +468,7 @@
 }
 
 
-/* =========================================================
-   SERVICE CARD
-========================================================= */
+/* SERVICE CARD styles: rules for this part of the ArdhiLens interface. */
 
 .service-card {
     position: relative;
@@ -589,9 +559,7 @@
 }
 
 
-/* =========================================================
-   SERVICE CARD CONTENT
-========================================================= */
+/* SERVICE CARD CONTENT styles: rules for this part of the ArdhiLens interface. */
 
 .service-number {
     color: #8b978e;
@@ -758,9 +726,7 @@
 }
 
 
-/* =========================================================
-   CTA
-========================================================= */
+/* CTA styles: rules for this part of the ArdhiLens interface. */
 
 .services-cta {
     padding:
@@ -856,9 +822,7 @@
 }
 
 
-/* =========================================================
-   ACTIVE SERVICES NAV
-========================================================= */
+/* ACTIVE SERVICES NAV styles: rules for this part of the ArdhiLens interface. */
 
 .nav-pill a.active {
     background:
@@ -874,9 +838,7 @@
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* TABLET styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 1000px) {
 
@@ -905,9 +867,7 @@
 }
 
 
-/* =========================================================
-   TABLET / SMALL LAPTOP
-========================================================= */
+/* TABLET / SMALL LAPTOP styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 900px) {
 
@@ -927,9 +887,7 @@
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* MOBILE styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 760px) {
 
@@ -1043,9 +1001,7 @@
 }
 
 
-/* =========================================================
-   SMALL PHONES
-========================================================= */
+/* SMALL PHONES styles: rules for this part of the ArdhiLens interface. */
 
 @media (max-width: 430px) {
 
@@ -1094,9 +1050,7 @@
 }
 
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
+/* REDUCED MOTION styles: rules for this part of the ArdhiLens interface. */
 
 @media (prefers-reduced-motion: reduce) {
 

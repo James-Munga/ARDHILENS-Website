@@ -1,5 +1,5 @@
 
-/* MYGEOVISION - Main JavaScript */
+/* Shared page controller: initializes navigation, visual effects, and newsletter behavior. */
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".nav-pill a");
 
 
-    /* Mobile Navigation */
+    /* Mobile navigation: toggles the menu and keeps its expanded state accessible. */
 
     if (menuButton && mobileMenu) {
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* Scroll Reveal */
+    /* Scroll reveal: makes marked page elements visible as they enter the viewport. */
 
     if ("IntersectionObserver" in window) {
 
@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* Parallax */
+    /* Parallax effect: adjusts decorative layers in response to page scrolling. */
 
     function updateParallax() {
 
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateParallax();
 
 
-    /* Navbar */
+    /* Navigation bar: updates its appearance as the visitor scrolls. */
 
     function updateNavbar() {
 
@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", () => {
     updateNavbar();
 
 
-    /* Stage Hover */
+    /* Process cards: coordinate hover states across the workflow stages. */
 
     processStages.forEach(stage => {
 
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* Navigation */
+    /* Navigation helpers: keep active links in sync with user interaction. */
 
     function setActiveNav(link) {
 
@@ -279,9 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-/* =====================================================
-   HOME PAGE NAVIGATION
-===================================================== */
+/* Home Page Navigation section: JavaScript behavior for this part of the page. */
 
 if (homeLink) {
 
@@ -289,10 +287,7 @@ if (homeLink) {
         "click",
         event => {
 
-            /*
-             * Only intercept Home when already
-             * on index.html.
-             */
+            /* * Only intercept Home when already * on index.html. */
             const currentPage =
                 window.location.pathname
                     .split("/")
@@ -379,9 +374,7 @@ if (homeLink) {
 
  
 
-/* =====================================================
-   PAGE-BASED ACTIVE NAVIGATION
-===================================================== */
+/* Page-Based Active Navigation section: JavaScript behavior for this part of the page. */
 
 function getCurrentPage() {
 
@@ -412,9 +405,7 @@ function getLinkPage(link) {
         return "";
     }
 
-    /*
-     * Ignore section links such as #home.
-     */
+    /* * Ignore section links such as #home. */
     if (href.startsWith("#")) {
         return "";
     }
@@ -434,10 +425,7 @@ function setCurrentPageActive() {
         getCurrentPage();
 
 
-    /*
-     * First remove active from
-     * all desktop and mobile links.
-     */
+    /* * First remove active from * all desktop and mobile links. */
     navLinks.forEach(link => {
 
         link.classList.remove(
@@ -451,10 +439,7 @@ function setCurrentPageActive() {
     });
 
 
-    /*
-     * Then activate the link matching
-     * the current HTML page.
-     */
+    /* * Then activate the link matching * the current HTML page. */
     navLinks.forEach(link => {
 
         const linkPage =
@@ -485,9 +470,7 @@ function setCurrentPageActive() {
 }
 
 
-/*
- * Run immediately when page loads.
- */
+/* * Run immediately when page loads. */
 setCurrentPageActive();
 
 
@@ -765,21 +748,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
-
-
-
-// ABOUT SECTION
-/* =========================================================
-   MYGEOVISION
-   ABOUT PAGE
-========================================================= */
+// ABOUT SECTION section: behavior for this part of the ArdhiLens page.
+/* Mygeovision About Page section: JavaScript behavior for this part of the page. */
 
 document.addEventListener("DOMContentLoaded", () => {
 
 
-    /* =====================================================
-       MOBILE NAVIGATION
-    ===================================================== */
+    /* Mobile Navigation section: JavaScript behavior for this part of the page. */
 
     const menuButton =
         document.querySelector(".about-menu");
@@ -832,9 +807,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =====================================================
-       TEAM CARD MOUSE MOVEMENT
-    ===================================================== */
+    /* Team Card Mouse Movement section: JavaScript behavior for this part of the page. */
 
     const personCards =
         document.querySelectorAll(
@@ -936,9 +909,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =====================================================
-       PARTNERSHIP CARD MOVEMENT
-    ===================================================== */
+    /* Partnership Card Movement section: JavaScript behavior for this part of the page. */
 
     const partnerCards =
         document.querySelectorAll(
@@ -1040,9 +1011,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    /* =====================================================
-       SCROLL REVEAL
-    ===================================================== */
+    /* Scroll Reveal section: JavaScript behavior for this part of the page. */
 
     const revealItems =
         document.querySelectorAll(
@@ -1097,9 +1066,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 
-    /* =====================================================
-       SUBTLE BACKGROUND MOVEMENT
-    ===================================================== */
+    /* Subtle Background Movement section: JavaScript behavior for this part of the page. */
 
     const peopleSection =
         document.querySelector(

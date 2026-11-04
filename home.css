@@ -1506,10 +1506,8 @@ a.footer-contact-line:hover {
 
 
 
-/* HOME TAB ACTIVE STATE */
-/* =====================================================
-   ACTIVE DESKTOP NAVIGATION
-===================================================== */
+/* HOME TAB ACTIVE STATE styles: rules for this part of the ArdhiLens interface. */
+/* ACTIVE DESKTOP NAVIGATION styles: rules for this part of the ArdhiLens interface. */
 
 .nav-pill a {
     position: relative;
@@ -1545,10 +1543,8 @@ a.footer-contact-line:hover {
 }
 
 
-/* =====================================================
-   MOBILE ACTIVE NAVIGATION
-===================================================== */
+/* MOBILE ACTIVE NAVIGATION styles: rules for this part of the ArdhiLens interface. */
 
 
 
-/* SERVICES PAGE */
+/* SERVICES PAGE styles: rules for this part of the ArdhiLens interface. */
