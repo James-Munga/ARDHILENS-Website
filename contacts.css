@@ -1076,6 +1076,72 @@
 }
 
 
+/* INTERACTIVE LOCATION MAP */
+
+.contact-map-panel {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 84px auto 0;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid rgba(30, 48, 38, 0.10);
+    box-shadow: 0 20px 55px rgba(30, 45, 34, 0.07);
+}
+
+.contact-map-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-map-heading h3 {
+    margin-top: 7px;
+    color: #17211c;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
+}
+
+.contact-map-heading p {
+    margin-top: 6px;
+    color: #737d76;
+    font-size: 13px;
+}
+
+.contact-map-directions {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 17px;
+    background: #17211c;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.contact-map-directions:hover {
+    background: #006e5c;
+    transform: translateY(-2px);
+}
+
+.contact-map-frame {
+    height: 420px;
+    overflow: hidden;
+    background: #e4eae4;
+}
+
+.contact-map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
 /* SOCIAL CONNECT styles: rules for this part of the ArdhiLens interface. */
 
 .contact-connect {
@@ -1216,6 +1282,10 @@
         grid-template-columns: 1fr;
     }
 
+    .contact-map-frame {
+        height: 360px;
+    }
+
 
     .contact-info-card {
         min-height: 220px;
@@ -1332,6 +1402,19 @@
         padding:
             100px 6%
             85px;
+    }
+
+    .contact-map-panel {
+        padding: 20px;
+    }
+
+    .contact-map-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .contact-map-frame {
+        height: 320px;
     }
 
 

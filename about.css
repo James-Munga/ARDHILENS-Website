@@ -377,7 +377,7 @@
         block;
 
     margin-bottom:
-        54px;
+        30px;
 }
 
 
@@ -414,7 +414,7 @@
         #7a877e;
 
     font-size:
-        9px;
+        10px;
 
     font-weight:
         700;
@@ -493,7 +493,7 @@
 
     padding:
         150px 7%
-        160px;
+        110px;
 
     overflow:
         hidden;
@@ -633,6 +633,117 @@
 }
 
 
+.purpose-section {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 18px;
+
+    /* Keep the team section below the first viewport; the purpose cards lead this page. */
+    margin-bottom: max(220px, 28vh);
+
+    align-items: stretch;
+
+}
+
+
+.purpose-card {
+
+    position: relative;
+
+    padding: clamp(30px, 2.5vw, 44px);
+    min-height: 390px;
+
+    border: 1px solid rgba(25,45,35,0.12);
+    border-top: 0;
+
+    background: linear-gradient(155deg, rgba(255,255,255,0.98), rgba(248,250,247,0.94));
+
+    box-shadow: 0 18px 44px rgba(25,45,35,0.07);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+
+}
+
+
+.purpose-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 3px;
+
+    background: #00a989;
+
+    transition: width 0.35s ease;
+
+}
+
+
+.purpose-card:hover {
+
+    transform: translateY(-6px);
+
+    border-color: rgba(0,169,137,0.4);
+
+    box-shadow: 0 20px 42px rgba(25,45,35,0.12);
+
+}
+
+
+.purpose-card:hover::before,
+.purpose-card:focus-within::before,
+.purpose-card:active::before {
+
+    width: 100%;
+
+}
+
+
+.purpose-card:focus-within {
+
+    outline: 2px solid #00a989;
+
+    outline-offset: 3px;
+
+}
+
+
+.purpose-card h2 {
+
+    margin: 14px 0 10px;
+
+    color: #173d30;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(27px, 2vw, 34px);
+
+    letter-spacing: -0.6px;
+
+}
+
+
+.purpose-card p {
+
+    color: #59665e;
+
+    font-size: clamp(16px, 1.1vw, 18px);
+
+    line-height: 1.7;
+
+}
+
+
 /* TEAM GRID styles: rules for this part of the ArdhiLens interface. */
 
 .people-grid {
@@ -654,7 +765,7 @@
         relative;
 
     height:
-        610px;
+        470px;
 
     overflow:
         hidden;
@@ -755,10 +866,10 @@
         absolute;
 
     top:
-        26px;
+        20px;
 
     left:
-        26px;
+        20px;
 
     right:
         26px;
@@ -790,10 +901,10 @@
 .person-top i {
 
     width:
-        40px;
+        34px;
 
     height:
-        40px;
+        34px;
 
     display:
         flex;
@@ -841,13 +952,13 @@
         absolute;
 
     left:
-        30px;
+        22px;
 
     right:
-        30px;
+        22px;
 
     bottom:
-        30px;
+        22px;
 
     z-index:
         5;
@@ -876,13 +987,13 @@
         #00cfa5;
 
     font-size:
-        15px;
+        12px;
 
     font-weight:
         700;
 
     letter-spacing:
-        2px;
+        1.3px;
 }
 
 
@@ -899,7 +1010,7 @@
         sans-serif;
 
     font-size:
-        29px;
+        24px;
 
     font-weight:
         500;
@@ -937,7 +1048,7 @@
         rgba(255,255,255,0.72);
 
     font-size:
-        11px;
+        10px;
 
     line-height:
         1.7;
@@ -1524,11 +1635,19 @@
             auto;
     }
 
+    .purpose-section {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        margin-bottom: 30px;
+
+    }
+
 
     .person-card {
 
         height:
-            590px;
+            470px;
     }
 
 }
@@ -1577,8 +1696,21 @@
     .partnership-section {
 
         padding:
-            105px 6%
+            132px 6%
             110px;
+    }
+
+    .purpose-section {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .purpose-card {
+
+        padding: 25px;
+
     }
 
 
@@ -1595,7 +1727,7 @@
     .person-card {
 
         height:
-            550px;
+            440px;
     }
 
 
@@ -1665,7 +1797,7 @@
     .person-card {
 
         height:
-            520px;
+            420px;
     }
 
 

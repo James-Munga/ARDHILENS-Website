@@ -583,6 +583,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
+    if (typeof emailjs === "undefined") {
+        console.error("EmailJS failed to load.");
+        statusMessage.textContent =
+            "The email service did not load. Refresh the page and try again.";
+        statusMessage.classList.add("error");
+        return;
+    }
+
+
     emailjs.init({
         publicKey: "fwyn_05ptTSE07gnn"
     });
@@ -621,11 +630,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 phone:
                     document.getElementById("phone").value.trim(),
 
+                location:
+                    document.getElementById("location")?.value.trim() || "",
+
                 service:
                     document.getElementById("service").value,
-
-                location:
-                    document.getElementById("location").value.trim(),
 
                 message:
                     document.getElementById("message").value.trim(),
@@ -639,8 +648,8 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
 
                 await emailjs.send(
-                    "service_xlkiuxr",
-                    "template_lgsscr7",
+                    "service_3ooqn7h",
+                    "template_stg0wsq",
                     templateParams
                 );
 
@@ -696,7 +705,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
                 statusMessage.textContent =
-                    "We could not send your enquiry right now. Please try again or contact us directly by email.";
+                    `We could not send your enquiry. ${error?.text || error?.message || "Please check the EmailJS template settings and try again."}`;
 
                 statusMessage.classList.add(
                     "error"
