@@ -98,12 +98,11 @@ If GitHub requests authentication, use Git Credential Manager, GitHub CLI authen
 
 ## Publish with GitHub Pages
 
-GitHub Pages can host this static site. The repository currently uses `home.html` as the home page filename; a Pages site expects an `index.html` file at its published root. Before publishing, add an `index.html` entry page (for example, a copy of `home.html`) so the site root opens correctly. Keep it in sync when the home page changes. The existing `home.html` URL will also remain available.
+The root `index.html` redirects visitors to `home.html`. The `.github/workflows/static.yml` workflow publishes the repository as a static site whenever changes are pushed to `main`.
 
-1. Push the site files to GitHub using the steps above.
-2. Open the repository on GitHub and go to **Settings → Pages**.
-3. Under **Build and deployment**, choose **Deploy from a branch**.
-4. Select the branch you pushed (usually `main`) and the `/ (root)` folder, then save.
+1. Open the repository on GitHub and go to **Settings → Pages**.
+2. Under **Build and deployment**, choose **GitHub Actions** as the source.
+3. Push to `main` to start the deployment workflow.
 5. Wait for the Pages deployment to finish. GitHub will show the published address on the Pages settings screen.
 6. Open the published site and check the navigation, images, videos, project map, and contact form.
 
@@ -120,7 +119,7 @@ Pages serves the site over HTTPS. If a map or media item fails after deployment,
 
 - **A page or image is missing:** Check the path spelling and capitalization, and confirm the asset is committed.
 - **The project map is blank:** Run the site from a local server or check the deployed browser console for a failed GeoJSON request. Confirm both files in `Data/` are present.
-- **The site root returns a not-found page:** Add and push the root `index.html` entry page described in the GitHub Pages section.
+- **The site root returns a not-found page:** Confirm the root `index.html` is present and that the Pages workflow completed successfully.
 - **`git push` is rejected:** Check your authentication and permissions, then fetch and inspect remote changes before integrating them.
 
 ## License and data
