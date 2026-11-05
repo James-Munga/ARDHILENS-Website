@@ -4,16 +4,16 @@ ArdhiLens is a multi-page website introducing the organisation's geospatial serv
 
 ## Contents
 
-- `home.html` â€” home page and shared site interactions.
-- `services.html` â€” geospatial services.
-- `projects.html` â€” project map and project statistics.
-- `about.html` â€” organisation, team, and partners.
-- `contacts.html` â€” contact information and enquiry form.
-- `home.css`, `services.css`, `projects.css`, `about.css`, `contacts.css` â€” page styles. The secondary pages also load `home.css` for shared styling.
-- `home.js` â€” shared navigation, page effects, and newsletter interactions. The contact form integration is loaded by `contacts.html`.
-- `projects.js` â€” project map and GeoJSON loading.
-- `Images/` and `Video/` â€” local page media.
-- `Data/` â€” GeoJSON used by the project map and supporting geospatial data.
+- `home.html` — home page and shared site interactions.
+- `services.html` — geospatial services.
+- `projects.html` — project map and project statistics.
+- `about.html` — organisation, team, and partners.
+- `contacts.html` — contact information and enquiry form.
+- `home.css`, `services.css`, `projects.css`, `about.css`, `contacts.css` — page styles. The secondary pages also load `home.css` for shared styling.
+- `home.js` — shared navigation, page effects, and newsletter interactions. The contact form integration is loaded by `contacts.html`.
+- `projects.js` — project map and GeoJSON loading.
+- `Images/` and `Video/` — local page media.
+- `Data/` — GeoJSON used by the project map and supporting geospatial data.
 
 ## Requirements
 
@@ -101,7 +101,7 @@ If GitHub requests authentication, use Git Credential Manager, GitHub CLI authen
 GitHub Pages can host this static site. The repository currently uses `home.html` as the home page filename; a Pages site expects an `index.html` file at its published root. Before publishing, add an `index.html` entry page (for example, a copy of `home.html`) so the site root opens correctly. Keep it in sync when the home page changes. The existing `home.html` URL will also remain available.
 
 1. Push the site files to GitHub using the steps above.
-2. Open the repository on GitHub and go to **Settings â†’ Pages**.
+2. Open the repository on GitHub and go to **Settings → Pages**.
 3. Under **Build and deployment**, choose **Deploy from a branch**.
 4. Select the branch you pushed (usually `main`) and the `/ (root)` folder, then save.
 5. Wait for the Pages deployment to finish. GitHub will show the published address on the Pages settings screen.
