@@ -9,6 +9,8 @@ const PROJECTS_GEOJSON =
 const COUNTIES_GEOJSON =
     "Data/KenyaCounties.geojson";
 
+const KENYA_MAP_ZOOM = 10;
+
 
 /* Global Variables section: JavaScript behavior for this part of the page. */
 
@@ -30,9 +32,6 @@ const totalProjectsElement =
 
 const mappedLocationsElement =
     document.getElementById("mappedLocations");
-
-const mappedCountiesElement =
-    document.getElementById("mappedCounties");
 
 const mapProjectCountElement =
     document.getElementById("mapProjectCount");
@@ -157,7 +156,7 @@ function initializeMap() {
                 "abcd",
 
             maxZoom:
-                24
+                25
 
         }
     ).addTo(
@@ -165,11 +164,11 @@ function initializeMap() {
     );
 
 
-    /* Temporary Kenya view. It will automatically be replaced by the GeoJSON bounds after loading. */
+    /* Use a country-scale fallback while the Kenya boundary data loads. */
 
     projectsMap.setView(
         [-0.0236, 37.9062],
-        10
+        KENYA_MAP_ZOOM
     );
 
 
@@ -263,8 +262,7 @@ async function loadGeospatialData() {
         /* Calculate statistics. */
 
         calculateStatistics(
-            projectsData,
-            countiesData
+            projectsData
         );
 
 
@@ -565,17 +563,17 @@ function createProjectIcon() {
 }
 
 
-/* Fit Map To Project Data section: JavaScript behavior for this part of the page. */
+/* Fit Map To Kenya section: JavaScript behavior for this part of the page. */
 
 function fitMapToData() {
 
     if (
-        projectsLayer &&
-        projectsLayer.getBounds().isValid()
+        countiesLayer &&
+        countiesLayer.getBounds().isValid()
     ) {
 
         const bounds =
-            projectsLayer.getBounds();
+            countiesLayer.getBounds();
 
 
         projectsMap.fitBounds(
@@ -586,9 +584,15 @@ function fitMapToData() {
                     [60, 60],
 
                 maxZoom:
-                    12
+                    KENYA_MAP_ZOOM
 
             }
+        );
+
+        /* Apply the selected zoom explicitly; maxZoom alone does not zoom in. */
+        projectsMap.setView(
+            bounds.getCenter(),
+            KENYA_MAP_ZOOM
         );
 
     }
@@ -599,16 +603,11 @@ function fitMapToData() {
 /* Calculate Statistics section: JavaScript behavior for this part of the page. */
 
 function calculateStatistics(
-    projectsData,
-    countiesData
+    projectsData
 ) {
 
     const projects =
         projectsData.features || [];
-
-    const counties =
-        countiesData.features || [];
-
 
     /* TOTAL PROJECTS This comes directly from the number of GeoJSON features. */
 
@@ -681,12 +680,6 @@ function calculateStatistics(
     animateNumber(
         mappedLocationsElement,
         uniqueLocations.size
-    );
-
-
-    animateNumber(
-        mappedCountiesElement,
-        counties.length
     );
 
 
