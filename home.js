@@ -593,7 +593,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     emailjs.init({
-        publicKey: "fwyn_05ptTSE07gnn"
+        publicKey: "IljbI854t1icFDr_p"
     });
 
 
@@ -621,22 +621,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const templateParams = {
 
-                name:
+                from_name:
                     document.getElementById("name").value.trim(),
 
-                email:
+                from_email:
                     document.getElementById("email").value.trim(),
 
-                phone:
+                phone_number:
                     document.getElementById("phone").value.trim(),
 
                 location:
                     document.getElementById("location")?.value.trim() || "",
 
-                service:
+                service_required:
                     document.getElementById("service").value,
 
-                message:
+                from_message:
                     document.getElementById("message").value.trim(),
 
                 time:
@@ -648,8 +648,8 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
 
                 await emailjs.send(
-                    "service_3ooqn7h",
-                    "template_stg0wsq",
+                    "service_saciqv1",
+                    "template_gewvnvk",
                     templateParams
                 );
 
@@ -729,32 +729,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     );
 
-
-    const newsletterForm =
-        document.getElementById("newsletterForm");
-
-    const newsletterMessage =
-        document.getElementById("newsletterMessage");
-
-
-    if (newsletterForm && newsletterMessage) {
-
-        newsletterForm.addEventListener(
-            "submit",
-            event => {
-
-                event.preventDefault();
-
-                newsletterMessage.classList.add(
-                    "show"
-                );
-
-                newsletterForm.reset();
-
-            }
-        );
-
-    }
 
 });
 // ABOUT SECTION section: behavior for this part of the ArdhiLens page.

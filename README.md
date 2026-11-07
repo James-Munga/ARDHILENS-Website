@@ -1,19 +1,21 @@
-ï»¿# ArdhiLens Website
+# ArdhiLens Website
+
+**Website:** [ArdhiLens on GitHub Pages](https://james-munga.github.io/ARDHILENS-Website/)
 
 ArdhiLens is a multi-page website introducing the organisation's geospatial services, team, contact information, and mapping projects. It is built with plain HTML, CSS, and JavaScript and can be previewed locally without a build step.
 
 ## Contents
 
-- `home.html` â€” home page and shared site interactions.
-- `services.html` â€” geospatial services.
-- `projects.html` â€” project map and project statistics.
-- `about.html` â€” organisation, team, and partners.
-- `contacts.html` â€” contact information and enquiry form.
-- `home.css`, `services.css`, `projects.css`, `about.css`, `contacts.css` â€” page styles. The secondary pages also load `home.css` for shared styling.
-- `home.js` â€” shared navigation, page effects, and newsletter interactions. The contact form integration is loaded by `contacts.html`.
-- `projects.js` â€” project map and GeoJSON loading.
-- `Images/` and `Video/` â€” local page media.
-- `Data/` â€” GeoJSON used by the project map and supporting geospatial data.
+- `home.html` — home page and shared site interactions.
+- `services.html` — geospatial services.
+- `projects.html` — project map and project statistics.
+- `about.html` — organisation, team, and partners.
+- `contacts.html` — contact information and enquiry form.
+- `home.css`, `services.css`, `projects.css`, `about.css`, `contacts.css` — page styles. The secondary pages also load `home.css` for shared styling.
+- `home.js` — shared navigation, page effects, and newsletter interactions. The contact form integration is loaded by `contacts.html`.
+- `projects.js` — project map and GeoJSON loading.
+- `Images/` and `Video/` — local page media.
+- `Data/` — GeoJSON used by the project map and supporting geospatial data.
 
 ## Requirements
 
@@ -100,7 +102,7 @@ If GitHub requests authentication, use Git Credential Manager, GitHub CLI authen
 
 The root `index.html` redirects visitors to `home.html`. The `.github/workflows/static.yml` workflow publishes the repository as a static site whenever changes are pushed to `main`.
 
-1. Open the repository on GitHub and go to **Settings â†’ Pages**.
+1. Open the repository on GitHub and go to **Settings ? Pages**.
 2. Under **Build and deployment**, choose **GitHub Actions** as the source.
 3. Push to `main` to start the deployment workflow.
 5. Wait for the Pages deployment to finish. GitHub will show the published address on the Pages settings screen.

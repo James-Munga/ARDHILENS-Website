@@ -2541,6 +2541,10 @@ a {
     color: #ff0000;
 }
 
+.footer-social.instagram:hover {
+    color: #e1306c;
+}
+
 .footer-social.twitter:hover {
     color: #ffffff;
 }
@@ -2555,6 +2559,13 @@ a {
     line-height: 1.5;
     text-decoration: none;
     transition: color 0.3s ease;
+}
+
+/* Give footer copy a clear glow when pointed at or reached by keyboard. */
+.footer :is(h3, p, li, a, span, label):hover,
+.footer :is(a, button, input, textarea, select):focus-visible {
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(56, 200, 155, 0.72);
 }
 
 .footer-contact-line i {
@@ -2744,4 +2755,101 @@ a.footer-contact-line:hover {
 
 .footer-social {
     border: none !important;
+}
+
+/* Shared newsletter footer styling, matched across every page. */
+.footer .newsletter h3 {
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+.footer .newsletter h3::after {
+    display: block !important;
+    width: 40px;
+    height: 3px;
+    margin-top: 13px;
+}
+
+.footer .newsletter > p {
+    max-width: 360px;
+    margin: 0 0 28px;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer .newsletter-form {
+    max-width: 360px;
+    min-height: 62px;
+    align-items: center;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.footer .newsletter-form input[type="email"] {
+    width: 0;
+    padding: 12px 14px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.footer .newsletter-form input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.48);
+    opacity: 1;
+}
+
+.footer .newsletter-form .input--hidden {
+    display: none !important;
+}
+
+.footer .newsletter-form button {
+    flex: 0 0 auto;
+    min-height: 46px;
+    padding: 0 24px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.footer .newsletter-form:focus-within {
+    border-color: rgba(56, 200, 155, 0.55);
+    box-shadow: 0 0 0 3px rgba(56, 200, 155, 0.08);
+}
+
+/* Keep the complete email placeholder visible beside the subscribe button. */
+.footer .newsletter-form input[type="email"] {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 13px;
+}
+
+.footer .newsletter-form button {
+    flex: 0 0 112px;
+    width: 112px;
+    min-width: 112px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+/* Compact newsletter control sizing. */
+.footer .newsletter-form {
+    max-width: 330px;
+    min-height: 54px;
+    padding: 4px;
+}
+
+.footer .newsletter-form input[type="email"] {
+    font-size: 12px;
+    padding: 10px 8px;
+}
+
+.footer .newsletter-form button {
+    flex-basis: 96px;
+    width: 96px;
+    min-width: 96px;
+    min-height: 38px;
+    padding: 0 10px;
+    font-size: 12px;
 }
